@@ -35,11 +35,12 @@ const schema = {
   },
 };
 const { userGenerator } = scaffold({
+  hasManyMin: 1,
   schema,
 });
 const user = userGenerator();
-const userRepos = user.repositories();
-const firstRepoCommits = userRepos[0].commits();
+const userRepos = user.repositories;
+const firstRepoCommits = userRepos[0].commits;
 
 console.log(user);
 console.log(userRepos);
