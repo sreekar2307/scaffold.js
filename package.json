@@ -1,15 +1,16 @@
 {
   "name": "scaffold",
   "version": "0.0.1",
-  "description": "",
+  "description": "Generating test fixtures made easy",
   "author": "Sreekar",
   "license": "MIT",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "prettier": "npx prettier --write .",
-    "lint": "npx eslint ."
+    "build": "npx webpack",
+    "lint": "npx eslint .",
+    "prettier:check": "npx prettier --check --ignore-path .eslintignore .",
+    "prettier:write": "npx prettier --write --ignore-path .eslintignore ."
   },
   "dependencies": {
     "ajv": "^7.1.1",
@@ -19,10 +20,15 @@
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-node": "^11.1.0",
     "faker": "^5.4.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "webpack": "^5.24.1",
+    "webpack-cli": "^4.5.0"
   }
 }
