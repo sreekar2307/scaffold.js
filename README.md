@@ -2,8 +2,14 @@
 
 Creating test fixtures has never been so easy
 
+### Installation
+
+```npm install @scaffold.js/scaffold```
+
+### Usage
+
 ```js
-const scaffold = require('scaffold');
+const scaffold = require('@scaffold.js/scaffold');
 const faker = require('faker');
 const schema = {
     types: {

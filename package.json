@@ -1,11 +1,20 @@
 {
-  "name": "scaffold",
+  "name": "@scaffold.js/scaffold",
   "version": "0.0.1",
   "description": "Generating test fixtures made easy",
   "author": "Sreekar",
   "license": "MIT",
   "main": "index.js",
   "type": "commonjs",
+  "repository": "https://github.com/sreekar2307/scaffold.js",
+  "homepage": "https://github.com/sreekar2307/scaffold.js",
+  "keywords": [
+    "fixtures",
+    "scaffolds",
+    "testing",
+    "schema",
+    "schemaGeneration"
+  ],
   "scripts": {
     "build": "npx webpack",
     "lint": "npx eslint .",
