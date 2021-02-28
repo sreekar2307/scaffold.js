@@ -27,22 +27,21 @@ const employee = employeeGenerator();
 const manager = employee.manager;
 console.log(employee);
 // {
-//    id: 1,
-//    name: 'dolor',
-//    contact: 'dolor',
-//    department: 'libero',
-//    manager: [Getter],
-//    email: 'scaffold.awesome41@gmail.com'
+//     id: 1,
+//     name: 'non',
+//     contact: 'sapien',
+//     department: 'nec',
+//     manager: [Getter],
+//     email: 'scaffold_awesome@gmail.com'
 // }
 console.log(manager);
-
 // {
-//   id: 1,
-//   name: 'dolor',
-//   contact: 'dolor',
-//   department: 'libero',
-//   manager: [Getter],
-//   email: 'scaffold.awesome41@gmail.com'
+//     id: 2,
+//     name: 'nisi',
+//     contact: 'adipiscing',
+//     department: 'sapien',
+//     manager: [Getter],
+//     email: 'scaffold26@yahoo.com'
 // }
 ```
 
@@ -60,7 +59,7 @@ Supports multiple in-built primitive types
 ]
 ```
 
-If the in built-in primitives are not sufficient you can always pass a pure function for a field like this
+If the in built primitives are not sufficient you can always pass a pure function for a field like this
 
 ```js
 {
@@ -95,7 +94,7 @@ one-many relationship is made possible through _hasMany field within a type
         _hasMany: ['Course', 'Project']
     }
 }
-// this will pluralize 'Course', 'Project' to courses and projects and them as getters to generated Student fixture
+// this will pluralize 'Course', 'Project' to courses and projects and add them as getters to the generated Student fixture
 ```
 
 ### One-One
