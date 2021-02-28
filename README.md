@@ -2,9 +2,21 @@
 
 Creating test fixtures has never been so easy
 
+### Installation
+
+```npm install @scaffold.js/scaffold```
+
+### Usage
+
 ```js
-const scaffold = require('scaffold');
-const faker = require('faker');
+const scaffold = require('@scaffold.js/scaffold');
+const pure = {
+    functions: {
+        email: function (firstName, lastName) {
+            return firstName + '_' + lastName + '@gmail.com'
+        }
+    }
+}
 const schema = {
     types: {
         Employee: {
@@ -14,7 +26,7 @@ const schema = {
             department: 'string',
             manager: 'Employee',
             email: {
-                _func: [faker.internet.email, 'scaffold', 'awesome'],
+                _func: [pure.functions.email, 'scaffold', 'awesome'],
             },
         },
     },
@@ -41,7 +53,7 @@ console.log(manager);
 //     contact: 'adipiscing',
 //     department: 'sapien',
 //     manager: [Getter],
-//     email: 'scaffold26@yahoo.com'
+//     email: 'scaffold_awesome@gmail.com'
 // }
 ```
 
@@ -62,9 +74,17 @@ Supports multiple in-built primitive types
 If the in built primitives are not sufficient you can always pass a pure function for a field like this
 
 ```js
+const pure = {
+    functions: {
+        email: function (firstName, lastName) {
+            return firstName + '_' + lastName + '@gmail.com'
+        }
+    }
+}
+
 {
     email: {
-        _func: [faker.internet.email, 'scaffold', 'awesome']
+        _func: [pure.functions.email, 'scaffold', 'awesome']
     }
 }
 ```
